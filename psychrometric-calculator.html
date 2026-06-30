@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychrometric Calculator | Performance Analyst</title>
+
+```
+<link rel="stylesheet" href="css/psychrometric.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+```
+<!-- HEADER -->
+<header class="calc-header">
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Website</a>
+
+        <h1>Professional Psychrometric Calculator</h1>
+
+        <p>
+            Calculate moist air properties for HVAC systems,
+            Cooling Towers, ACC Systems, Data Centers,
+            Power Plants, and Industrial Applications.
+        </p>
+    </div>
+</header>
+
+<!-- CALCULATOR -->
+<section class="calculator-section">
+
+    <div class="container">
+
+        <div class="calculator-grid">
+
+            <!-- INPUT PANEL -->
+            <div class="input-panel">
+
+                <h2>Input Parameters</h2>
+
+                <div class="form-group">
+                    <label for="dbt">
+                        Dry Bulb Temperature (°C)
+                    </label>
+                    <input
+                        type="number"
+                        id="dbt"
+                        placeholder="Enter DBT"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="mode">
+                        Calculation Mode
+                    </label>
+
+                    <select id="mode">
+                        <option value="rh">
+                            Relative Humidity
+                        </option>
+
+                        <option value="wbt">
+                            Wet Bulb Temperature
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label id="secondaryLabel">
+                        Relative Humidity (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="secondaryInput"
+                        placeholder="Enter RH"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="altitude">
+                        Altitude (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="altitude"
+                        value="0"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="pressure">
+                        Pressure (Pa)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pressure"
+                        placeholder="Auto calculated if empty"
+                    >
+                </div>
+
+                <div class="button-group">
+
+                    <button
+                        id="calculateBtn"
+                        class="btn btn-primary">
+                        Calculate
+                    </button>
+
+                    <button
+                        id="clearBtn"
+                        class="btn btn-secondary">
+                        Clear
+                    </button>
+
+                    <button
+                        id="pdfBtn"
+                        class="btn btn-success">
+                        Download PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- RESULTS PANEL -->
+            <div class="result-panel">
+
+                <h2>Calculation Results</h2>
+
+                <div class="status-bar" id="statusBar">
+                    Ready
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table class="result-table">
+
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Value</th>
+                                <th>Unit</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="resultsTable">
+
+                            <tr>
+                                <td>Dry Bulb Temperature</td>
+                                <td>-</td>
+                                <td>°C</td>
+                            </tr>
+
+                            <tr>
+                                <td>Pressure</td>
+                                <td>-</td>
+                                <td>Pa</td>
+                            </tr>
+
+                            <tr>
+                                <td>Relative Humidity</td>
+                                <td>-</td>
+                                <td>%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Wet Bulb Temperature</td>
+                                <td>-</td>
+                                <td>°C</td>
+                            </tr>
+
+                            <tr>
+                                <td>Dew Point Temperature</td>
+                                <td>-</td>
+                                <td>°C</td>
+                            </tr>
+
+                            <tr>
+                                <td>Humidity Ratio</td>
+                                <td>-</td>
+                                <td>kg/kg</td>
+                            </tr>
+
+                            <tr>
+                                <td>Enthalpy</td>
+                                <td>-</td>
+                                <td>kJ/kg</td>
+                            </tr>
+
+                            <tr>
+                                <td>Specific Volume</td>
+                                <td>-</td>
+                                <td>m³/kg</td>
+                            </tr>
+
+                            <tr>
+                                <td>Density</td>
+                                <td>-</td>
+                                <td>kg/m³</td>
+                            </tr>
+
+                            <tr>
+                                <td>Vapor Pressure</td>
+                                <td>-</td>
+                                <td>Pa</td>
+                            </tr>
+
+                            <tr>
+                                <td>Degree of Saturation</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- PsychroLib Library -->
+<script src="javascript/psychrolib.js"></script>
+
+<!-- Your Calculator JS -->
+<script src="javascript/psychrometric.js"></script>
+```
+
+</body>
+</html>

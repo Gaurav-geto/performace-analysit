@@ -1,0 +1,178 @@
+/* ===== RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+/* ===== HEADER ===== */
+
+.calc-header {
+  background: #0f172a;
+  color: white;
+  padding: 60px 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.back-btn {
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.calc-header h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.calc-header p {
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+/* ===== MAIN ===== */
+
+.calculator-section {
+  padding: 50px 0;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+}
+
+/* ===== INPUT PANEL ===== */
+
+.input-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.input-panel h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbe1ea;
+  border-radius: 8px;
+}
+
+/* ===== BUTTONS ===== */
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+}
+
+.btn-success {
+  background: #16a34a;
+  color: white;
+}
+
+/* ===== RESULT PANEL ===== */
+
+.result-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.result-panel h2 {
+  margin-bottom: 20px;
+}
+
+.status-bar {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ===== TABLE ===== */
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th {
+  background: #0f172a;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.result-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

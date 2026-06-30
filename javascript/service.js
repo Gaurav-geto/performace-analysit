@@ -1,0 +1,1 @@
+document.querySelectorAll('.faq h3').forEach(h=>h.onclick=()=>h.nextElementSibling.classList.toggle('open'));
